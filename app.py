@@ -1,4 +1,5 @@
 from flask import Flask
+import calculator;
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def new():
 
 @app.route('/add')
 def add():
-    return 'add';
+    return str(calculator.add(4.5, 7.8));
 
 if __name__ == '__main__':
     app.run();
